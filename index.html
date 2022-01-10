@@ -10,6 +10,8 @@
 <body>
     <div id="app">
         <h1>To-Do List</h1>
+        <input type="text" v-model="new_item">
+        <input type="submit" value="Add" @click="addTodo">
             <ol>
                 <li v-for="todo in todos">
                     {{todo}}
