@@ -3,11 +3,13 @@ new Vue({
     el:"#app",
     data:
     {
+        isSh:false,
         isEditing:false,
         isActive:false,
         selectedIndex:null,
         new_item:"",
-        todos:["reading","shopping"]
+        todos:["reading","shopping"],
+        completed:[]
     },
     methods: {
         addTodo()
@@ -65,7 +67,20 @@ new Vue({
             this.isEditing=false
             this.isActive=false
             this.todo=""
+        },
+
+        createCompleted(index,todo)
+        {
+            this.todo=todo
+            
+            this.index=index
+            this.completed.push(this.todo)
+            this.todos.splice(this.index,1)
+            this.todo=""
+            
         }
+
+
     }
     
 
