@@ -9,7 +9,8 @@ new Vue({ //creating vue instance
         selectedIndex:null,
         new_item:"",
         todos:["reading a book","go to shopping", "call a cousin", "watering the plants", "giving house keys to mom", "take medicines"],//list for active todos
-        completed:[]//list for completed tasks
+        completed:[]
+        //list for completed tasks
     },
     methods: {
         addTodo()
