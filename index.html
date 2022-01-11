@@ -4,29 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"> -->
+    <link rel="stylesheet" href="index.css">
+    <!-- <style>
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        h1 {
+        	padding-top: 40px;
+        }
+    </style> -->
     <title>To-Do List</title>
     <script src="vue.js"></script>
+   
 </head>
 <body>
     <div id="app">
+        <div class="header">
         <h1>To-Do List</h1>
         <div v-if="!isEditing">
-            <input type="text" v-model="todo">
-            <input type="submit" value="Add" @click="addTodo">
+            <input type="text" placeholder="Title..." v-model="todo">
+            <input type="submit" class="addBtn" value="Add" @click="addTodo">
+            
         </div>
+        
         <div v-else>
             <input type="text" v-model="todo">
-            <input type="submit" value="update" @click="updateTodo">
+            <input type="submit" class="addBtn" value="update" @click="updateTodo">
+            <button class="mid" value="Go back" @click="goBack">Go Back</button>
+            
+        </div>
         </div>
 
-            <ol>
+            <ul>
                 <li v-for="(todo,index) in todos">
                     {{todo}}
 
-                    <button @click="editTodo(index,todo)">Edit</button>
-                    <button @click="deleteTodo(index,todo)">Delete</button>
+                    <button :disabled="isActive" class="right" @click="editTodo(index,todo)">Edit</button>
+                    <button :disabled="isActive" class="right"  @click="deleteTodo(index,todo)">Delete</button>
                 </li>
-            </ol>
+            </ul>
         <script src="app.js"></script> 
     </div>
 </body>
