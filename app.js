@@ -78,6 +78,15 @@ new Vue({
             this.todos.splice(this.index,1)
             this.todo=""
             
+        },
+
+        deleteAll()
+        {
+                for(var i=this.completed.length-1;i>=0;i--)
+                {
+
+                this.completed.splice(i,1)
+                }
         }
 
 

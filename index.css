@@ -38,7 +38,16 @@ ul li:hover {
   background: #ddd;
 }
 
-
+/* .checkmark {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    float: right;
+    margin-right:112px;
+  } */
 
 /* Style the close button */
 .close {
