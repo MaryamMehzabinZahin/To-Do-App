@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link rel="stylesheet" href="index.css">
     <!-- <style>
         .container {
@@ -43,20 +42,22 @@
             <ul>
                 <li v-for="(todo,index) in todos">
                     {{todo}}
-                    <button :disabled="isActive"  style="background-color:lightsalmon;float:right;" @click="deleteTodo(index)">Delete</button>
-                    <button :disabled="isActive" style="background-color:lightpink" class="right" @click="editTodo(index,todo)">Edit</button>
-                    <button :disabled="isActive" style="background-color:lightgreen" class="right" @click="createCompleted(index,todo)">Completed</button>                
+                    <button :disabled="isActive"  style="background-color:lightsalmon;float:right;" @click="deleteTodo(index)">Delete <i class="fa fa-trash" aria-hidden="true"></i></button>
+                    <button :disabled="isActive" style="background-color:lightpink" class="right" @click="editTodo(index,todo)">Edit <i class="fa fa-pencil" aria-hidden="true"></i></button>
+                    <button :disabled="isActive" style="background-color:lightgreen" class="right" @click="createCompleted(index,todo)">Completed <i class="fa fa-check" aria-hidden="true"></i></button>                
                 </li>
                
             </ul>
         </div>
         <div v-if="completed.length">
-            <h1 style="text-align: center;">Completed todos</h1>
+            <h1 style="text-align: center;">Total Completed To-Dos:{{completed.length}}</h1>
         <ul>
             <li class="strike"  v-for="(task,index) in completed">
                 {{task}}
             </li>
         </ul>
+        <button class="right" style="margin-top: 20px; background-color: azure;"  @click="deleteAll">delete all completed todos <i class="fa fa-trash" aria-hidden="true"></i></button>
+        
         </div>    
         <div v-else><h1 style="text-align: center;">Nothing completed yet</h1></div>
         <script src="app.js"></script> 
