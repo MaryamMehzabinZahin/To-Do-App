@@ -1,7 +1,7 @@
 
 body {
-  margin: 0;
-  min-width: 250px;
+  margin: 10px;
+  min-width: 200px;
 }
 
 /* Include the padding and border in an element's total width and height */
@@ -17,6 +17,7 @@ ul {
 
 /* Style the list items */
 ul li {
+   
   cursor: pointer;
   position: relative;
   padding: 12px 80px 12px 40px;
@@ -28,9 +29,9 @@ ul li {
 }
 
 /* Set all odd list items to a different color (zebra-stripes) */
-ul li:nth-child(odd) {
+/* ul li:nth-child(odd) {
   background: #f9f9f9;
-}
+} */
 
 /* Darker background-color on hover */
 ul li:hover {
@@ -72,7 +73,7 @@ input {
   margin: 0;
   border: none;
   border-radius: 0;
-  width: 75%;
+  width: 73%;
   padding: 10px;
   float: left;
   font-size: 16px;
@@ -85,7 +86,7 @@ input {
     width: 25%;
     background:lightgoldenrodyellow;
     color: #555;
-    float: right;
+    float: middle;
     text-align: center;
     font-size: 16px;
     cursor: pointer;
@@ -114,7 +115,11 @@ input {
 .right
 {
     float: right;
-    margin-right:100px;
-  
-   
+    margin-right:112px;
+}
+
+.strike
+{
+    background: #888;
+  text-decoration: line-through;
 }
