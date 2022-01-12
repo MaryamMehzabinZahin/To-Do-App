@@ -3,7 +3,7 @@ This is a simple everyday use To-do app. Users can add a to-do(task to be done).
 
 ## Project Setup
 ###### install dependencies
-#######Direct <script> Include
+Direct <script> Include
 
 
 
