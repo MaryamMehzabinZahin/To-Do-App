@@ -32,7 +32,7 @@ new Vue({ //creating vue instance
             this.todo=todo
             this.selectedIndex=index
             this.isEditing=true//isEditing is turned true so the update is enabled rather than 'ADD'
-            this.isActive=true         
+            this.isActive=true  //it is turned true so that all other buttons are disabled while updating       
         },
 
         updateTodo()
@@ -41,7 +41,7 @@ new Vue({ //creating vue instance
             {
                 this.todos.splice(this.selectedIndex,1,this.todo) //deleting 1 element at the selectedIndex
                 this.isEditing=false
-                this.isActive=false //it is turned false so that all other buttons are disabled while updating
+                this.isActive=false //it is turned false so that all buttons are active after the update      
                 this.todo=""
             }
             else
